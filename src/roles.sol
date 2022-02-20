@@ -68,7 +68,7 @@ contract DSRoles is DSAuth, DSAuthority
         return bytes32(0) != roles & shifted;
     }
 
-    function canCall(address caller, address code, bytes4 sig)
+    function canCall(address caller, address code, bytes4 sig) override
         public
         view
         returns (bool)
